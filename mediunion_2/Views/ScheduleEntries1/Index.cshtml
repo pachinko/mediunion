@@ -1,0 +1,75 @@
+﻿@model IEnumerable<mediunion_2.Models.ScheduleEntry>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FacilityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeneralFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransportationFee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remarks)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FacilityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CallNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeneralFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransportationFee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EntryId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EntryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EntryId })
+        </td>
+    </tr>
+}
+
+</table>

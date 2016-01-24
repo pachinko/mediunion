@@ -31,5 +31,7 @@ namespace mediunion_2.Models
         }
 
         public System.Data.Entity.DbSet<mediunion_2.Models.Contact> Contacts { get; set; }
+
+        public System.Data.Entity.DbSet<mediunion_2.Models.ScheduleEntry> ScheduleEntries { get; set; }
     }
 }

@@ -211,12 +211,17 @@
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ScheduleEntries1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201601231858269_Initial.cs" />
     <Compile Include="Migrations\201601231858269_Initial.Designer.cs">
       <DependentUpon>201601231858269_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601241701554_Initial1.cs" />
+    <Compile Include="Migrations\201601241701554_Initial1.Designer.cs">
+      <DependentUpon>201601241701554_Initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -296,6 +301,11 @@
     <Content Include="Views\Contacts\Details.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\ScheduleEntries1\Create.cshtml" />
+    <Content Include="Views\ScheduleEntries1\Delete.cshtml" />
+    <Content Include="Views\ScheduleEntries1\Details.cshtml" />
+    <Content Include="Views\ScheduleEntries1\Edit.cshtml" />
+    <Content Include="Views\ScheduleEntries1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -314,6 +324,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601231858269_Initial.resx">
       <DependentUpon>201601231858269_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601241701554_Initial1.resx">
+      <DependentUpon>201601241701554_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
