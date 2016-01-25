@@ -54,6 +54,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="DefaultConnection 部署" Order="1">
+          <Destination Path="Data Source=tcp:pacdb2.database.windows.net,1433%3bInitial Catalog=mediunion_db%3bUser Id=pachinko%40pacdb2%3bPassword=Test5566" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28LocalDb%29\MSSQLLocalDB%3bAttachDbFilename=|DataDirectory|\aspnet-mediunion_2-20160124011543.mdf%3bInitial Catalog=aspnet-mediunion_2-20160124011543%3bIntegrated Security=True" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\DefaultConnection 部署_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -215,13 +226,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601231858269_Initial.cs" />
-    <Compile Include="Migrations\201601231858269_Initial.Designer.cs">
-      <DependentUpon>201601231858269_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201601241701554_Initial1.cs" />
-    <Compile Include="Migrations\201601241701554_Initial1.Designer.cs">
-      <DependentUpon>201601241701554_Initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201601251045269_Initial.cs" />
+    <Compile Include="Migrations\201601251045269_Initial.Designer.cs">
+      <DependentUpon>201601251045269_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -322,11 +329,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601231858269_Initial.resx">
-      <DependentUpon>201601231858269_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601241701554_Initial1.resx">
-      <DependentUpon>201601241701554_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601251045269_Initial.resx">
+      <DependentUpon>201601251045269_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
